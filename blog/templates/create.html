@@ -1,6 +1,7 @@
 <form action="{% url 'create' %}" method="POST">
-
+{{error}}
  {{form.as_p}}
+    <!-- uzywamy tego, aby dać -->
     {% csrf_token %}
 
     <button type="submit">Generate</button>
