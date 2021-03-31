@@ -1,7 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from blog.models import Post
 from blog.forms import PostForm
-from django.contrib import messages
+
 
 
 def home(request):
@@ -10,7 +10,7 @@ def home(request):
 
 def create(request):
     if request.method == 'GET':
-        return render(request, 'create.html', {'form': PostForm()})
+        return render(request, 'create.html', {'form': PostForm()}) 
     else:
         form = PostForm(request.POST)
         if form.is_valid():
@@ -19,6 +19,11 @@ def create(request):
         else:
             error = 'Something went wrong'
             return render(request, 'create.html', {'form': PostForm(), 'error': error})
+
+
+def detail(request, postId):
+    post = get_object_or_404(Post, pk=postId)
+    return render(request, 'detail.html', {'post': post})
 
 
 
