@@ -5,11 +5,14 @@
 <form action="{% url 'create' %}" method="POST">
 {{error}}
  {{form.as_p}}
-    <!-- uzywamy tego, aby dać -->
+    <!-- uzywamy tego, aby zakomentować -->
     {% csrf_token %}
 
     <button type="submit">Generate</button>
 </form>
 
+<div class="text-center">
+<a href="{%url 'home'%}">Home</a>
+</div>
 
 {% endblock content %}
