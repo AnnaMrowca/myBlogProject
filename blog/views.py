@@ -5,7 +5,9 @@ from blog.forms import PostForm
 
 
 def home(request):
-    posts = Post.objects.all()
+    #tworzymy queryset, twoerzony dzięki danym z bazy danych
+    posts = Post.objects.all().order_by('-date')
+    #przekazujemy queryset do templatki
     return render(request, 'home.html', {'posts': posts})
 
 def create(request):
