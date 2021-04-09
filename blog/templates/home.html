@@ -1,18 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h3>I have written {{posts.count}} post{{posts.count|pluralize}}</h3>
-
+<h3 class="text-center">I have written {{posts.count}} post{{posts.count|pluralize}}</h3>
+<div class="row">
 {% for post in posts %}
 
-<a href="{% url 'detail' post.id %}"><h1>{{post.title}}</h1></a>
+    <div class="col-4">
+<a href="{% url 'detail' post.id %}">{{post.title}}</a>
 <h3>{{post.date|date:"j F Y"}}</h3>
 <p>{{post.text|truncatechars:150}}</p>
+        </div>
 
 {% endfor %}
+</div>
 
 <div class="text-center">
-<a  href="{% url 'create' %}">Create</a>
+<a href="{% url 'create' %}">Create</a>
 </div>
 
 {% endblock content %}
