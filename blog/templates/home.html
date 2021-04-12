@@ -4,11 +4,12 @@
 <h3 class="text-center">I have written {{posts.count}} post{{posts.count|pluralize}}</h3>
 <div class="row">
 {% for post in posts %}
-
     <div class="col-4">
-<a href="{% url 'detail' post.id %}">{{post.title}}</a>
+        <div class="post-box">
+<a class="post-title" href="{% url 'detail' post.id %}">{{post.title}}</a>
 <h3>{{post.date|date:"j F Y"}}</h3>
 <p>{{post.text|truncatechars:150}}</p>
+            </div>
         </div>
 
 {% endfor %}
