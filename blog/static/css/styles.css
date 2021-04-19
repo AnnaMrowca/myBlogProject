@@ -16,6 +16,7 @@ body {
 .post-box {
     background-color: #ffedcc;
     padding: 10px;
+    height: 100%;
 }
 
 .post-title:link,
@@ -33,3 +34,12 @@ body {
     border-bottom: 3px solid #ff8011;
 }
 
+/* --------------------------*/
+/* -----FORM CREATE ---------*/
+/* --------------------------*/
+
+.create-form {
+    display: flex;
+    flex-direction: column;
+
+}
