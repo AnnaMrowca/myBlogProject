@@ -41,5 +41,31 @@ body {
 .create-form {
     display: flex;
     flex-direction: column;
+}
 
+.form-element {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+}
+
+input {
+    width: 100%;
+}
+
+.form-element:first-child {
+    margin-right: 10px;
+}
+
+.form-element:last-child {
+    margin-left: 10px;
+}
+
+.create .row {
+    max-width: 800px;
 }
