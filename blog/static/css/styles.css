@@ -69,3 +69,46 @@ input {
 .create .row {
     max-width: 800px;
 }
+
+.text-field {
+    border: none;
+    box-shadow: 0 0 15px 3px #e6e6e6;
+    padding: 5px;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.text-field:focus {
+    outline: none;
+    box-shadow: 0 0 20px 3px #ccc;
+}
+
+
+input.text-field {
+    height: 30px;
+}
+
+textarea.text-field {
+    height: 150px;
+}
+
+label {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.create-form button[type="submit"] {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    padding: 3px 5px;
+    transition: all 0.5s;
+    }
+
+.create-form button[type="submit"]:hover {
+    background-color: white;
+    color: black;
+
+
+
+}
