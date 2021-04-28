@@ -30,14 +30,17 @@
     <!-- uzywamy tego, aby zakomentować -->
     {% csrf_token %}
 
-    <button type="submit">Generate</button>
-</form>
-    </div>
-</section>
+    <div class="buttons-row">
 
-<div class="text-center">
-<a href="{%url 'home'%}">Home</a>
+    <button class="btn-shape btn-black" type="submit">Generate</button>
+
+<a class="btn-shape btn-grey" href="{%url 'home'%}">Home</a>
+
+        </div>
+
+</form>
 </div>
+</section>
 
 {% endblock content %}
 

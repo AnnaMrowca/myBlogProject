@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     font-family: 'Lato', sans-serif;
 }
@@ -97,7 +101,7 @@ label {
     margin-bottom: 5px;
 }
 
-.create-form button[type="submit"] {
+/*.create-form button[type="submit"] {
     background-color: black;
     color: white;
     border: 1px solid black;
@@ -108,7 +112,60 @@ label {
 .create-form button[type="submit"]:hover {
     background-color: white;
     color: black;
+} refactoring */
+
+.btn-shape {
+    padding: 3px 5px;
+    transition: all 0.5s;
+    text-align: center;
+}
+
+.btn-black {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+.btn-black:hover {
+    background-color: white;
+    color: black;
+}
+
+.btn-grey {
+    background-color: #b3b3b3;
+    color: white;
+    border: 1px solid #b3b3b3;
+}
+
+.btn-grey:hover {
+    background-color: white;
+    color: black;
+ }
 
 
+.buttons-row {
+    display: flex;
+}
 
+.buttons-row button,
+.buttons-row a {
+    flex: 1;
+}
+
+.buttons-row button {
+    margin-right: 10px;
+}
+
+.buttons-row a {
+    margin-left: 10px;
+}
+
+.detail h1,
+.detail h3,
+.detail p {
+    padding: 0px;
+}
+
+#home-button {
+    margin-top: 15px;
 }
