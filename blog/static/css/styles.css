@@ -21,6 +21,13 @@ body {
     background-color: #ffedcc;
     padding: 10px;
     height: 100%;
+    transition: all 0.4s;
+}
+
+.post-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 2px #ffedcc
+
 }
 
 .post-title:link,
@@ -36,6 +43,10 @@ body {
 .post-title:hover,
 .post-title:active {
     border-bottom: 3px solid #ff8011;
+}
+
+.col-4 {
+    margin-bottom: 20px;
 }
 
 /* --------------------------*/
@@ -101,6 +112,13 @@ label {
     margin-bottom: 5px;
 }
 
+
+/* --------------------------*/
+/* ---- STYLING BUTTONS -----*/
+/* --------------------------*/
+
+
+
 /*.create-form button[type="submit"] {
     background-color: black;
     color: white;
@@ -114,8 +132,9 @@ label {
     color: black;
 } refactoring */
 
+
 .btn-shape {
-    padding: 3px 5px;
+    /*padding: 3px 5px;*/
     transition: all 0.5s;
     text-align: center;
 }
@@ -167,5 +186,12 @@ label {
 }
 
 #home-button {
+    width: calc(100% - 24px);
+    margin:0 auto;
     margin-top: 15px;
+}
+
+
+.detail p {
+    text-align: justify;
 }
